@@ -31,7 +31,6 @@ def rental_car_cost(days):
         total_cost = (rental_car_cost_per_day * days) - 20
     elif days < 3:
         total_cost = rental_car_cost_per_day * days
-
     return total_cost
 
 
@@ -40,12 +39,21 @@ def trip_cost(city, days, spending_money):
     return total
 
 
-print('Please enter a city from the following:\n '
-      'Charlotte \n '
-      'Tampa\n '
-      'Pittsburgh\n '
-      'Los Angeles')
-city = input('->')
-days = int(input('The no. of days \n-'))
-money = float(input('Enter you budget\n-'))
-print(trip_cost(city, days, money))
+if __name__ == "__main__":
+
+    print('Please enter a city from the following:\n '
+          'Charlotte \n '
+          'Tampa\n '
+          'Pittsburgh\n '
+          'Los Angeles')
+    city = input('->')
+    days = int(input('The no. of days \n'
+                     '->'))
+    money = float(input('Enter you budget\n'
+                        '->'))
+    print(
+        trip_cost(
+            city,
+            days,
+            money)
+    )
